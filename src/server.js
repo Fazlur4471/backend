@@ -1,10 +1,12 @@
 import app from "./app.js";
 import { sequelize } from "./config/db.js";
 import "./models/index.js";
+
 import uploadRoutes from "./routes/upload.routes.js";
+import productRoutes from "./routes/product.routes.js";
 
 app.use("/api/upload", uploadRoutes);
-
+app.use("/api/products", productRoutes);
 
 const PORT = process.env.PORT || 5000;
 
